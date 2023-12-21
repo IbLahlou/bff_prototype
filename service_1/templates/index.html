@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Example</title>
+</head>
+<body>
+    <h1>GraphQL Example</h1>
+    <div id="result"></div>
+
+    <script>
+        // A simple function to send a GraphQL query to the server
+        async function fetchData() {
+            const response = await fetch('/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({ query: '{ message }' }),
+            });
+            const data = await response.json();
+            document.getElementById('result').innerText = data.data.message;
+        }
+
+        // Fetch data when the page loads
+        document.addEventListener('DOMContentLoaded', fetchData);
+    </script>
+</body>
+</html>
