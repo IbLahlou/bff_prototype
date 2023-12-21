@@ -7,7 +7,7 @@ A Backend For Frontend is a pattern where a separate backend service is specific
 The BFF pattern helps in keeping the frontend and backend concerns separate, allowing for more flexibility, scalability, and customization tailored to the needs of a particular user interface.
 
 
-
+![Alt text](image-1.png)
 
 
 ## Project Structure
